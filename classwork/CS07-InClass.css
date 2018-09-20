@@ -33,9 +33,13 @@ td.thirtyfive{
     background-color:lightcyan;
 }
 p.scroll {
+    margin-left: auto;
+    margin-right: auto;
     Background-color: lime;
     Width: 250px; height: 300px;
     Overflow: scroll;
     Padding-right:10px;
     Padding-left:10px;
+    background-image:url("images/beaver.jpg");
+    opacity:0.6;
     }
