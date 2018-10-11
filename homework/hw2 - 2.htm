@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>HW2 - 2 HTML</title>
+<style type="text/css">
+body{
+    font-family:Arial;
+    background-color:black;
+}
+table{
+    text-align:center;
+    background-color: silver;
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content;
+    border:1px solid black;
+}
+tr{
+    border:1px solid black;
+}
+td{
+    border:1px solid black;
+}
+td.left{
+    text-align: left;
+}
+td#white{
+    background-color:white;
+}
+td.wider{
+    width:200px;
+}
+caption{
+    font-size:3em;
+    color:white;
+    margin-bottom: 30px;
+}
+p#textarea{
+    margin-top:2px;
+    margin-bottom:5px;
+}
+img{
+    text-align:center;
+    width:100px;
+}
+textarea{
+    background-color:yellow;
+}
+.text{
+    background-color:yellow;
+}
+#red{
+    background-color:red;
+}
+.fix{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    height:70px;
+    background: url('images/beaver.jpg') repeat-x;
+}
+</style>
+</head>
+
+<body>
+    <table><caption>Soap Survey</caption>
+        <tr><td>Soap Image</td><td>Soap Color<br>Preference</td><td class="wider">Soap Purchase<br>Intent</td><td class="wider">Soap Features Liked</td></tr>
+        <tr><td><img src="images/soap-2.jpg"></td>
+        <td class="left"><input type="radio" name="color" value="g">   Green<br>
+            <input type="radio" name="color" value="gd">   Gold (shown)<br>
+            <input type="radio" name="color" value="r">   Red</td>
+        <td class="wider"><p>At $5.00/unit<br>
+            <select name="purchase">
+            <option value="5">Definitely Buy</option>
+            <option value="4">Likely Buy</option>
+            <option value="3">Undecided</option>
+            <option value="2">Unlikely Buy</option>
+            <option value="1">Not Buy</option>
+            </select></p>
+        </td>
+        <td class="left"><p><input type="checkbox" name="features" value="1">Shape<br>
+        <input type="checkbox" name="features" value="2">Size<br>
+        <input type="checkbox" name="features" value="3">Smell<br>
+        <input type="checkbox" name="features" value="4">Texture<br>
+        </p></td>
+        </tr>
+        <tr><td><img src="images/soap-1.jpg"></td>
+            <td class="left"><input type="radio" name="color" value="i">   Ivory<br>
+               <input type="radio" name="color" value="sw">   Scandal Wood (shown)<br>
+                <input type="radio" name="color" value="p">   Pink</td>
+            <td class="wider"><p>At $8.00/unit<br>
+                <select name="purchase">
+                <option value="5">Definitely Buy</option>
+                <option value="4">Likely Buy</option>
+                <option value="3">Undecided</option>
+                <option value="2">Unlikely Buy</option>
+                <option value="1">Not Buy</option>
+                </select></p>
+            </td>
+            <td class="left"><p><input type="checkbox" name="features" value="1">Shape<br>
+            <input type="checkbox" name="features" value="2">Size<br>
+            <input type="checkbox" name="features" value="3">Smell<br>
+            <input type="checkbox" name="features" value="4">Texture<br>
+            </p></td></tr>
+            <tr><td id="white" colspan="4">Tell us about yourself...</td></tr>
+            <tr><td class="left">Gender:
+                <select name="gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option></td>
+                <td class="left" colspan="3">Age: (under 25 enter 1, 25-40 enter 2, else enter 3 <input type="text" name="age" maxlength="3" size="5" value="" class="text"></td>
+            </tr>
+            <tr><td class="left" colspan="2"><p id="textarea">Your comments are welcome:<br>
+                <textarea name="comments" rows="5" cols="50"></textarea>
+            </p>
+            </td>
+            <td colspan="2">
+                <p><button type="submit" name="submit" value="Done">
+                Done</button>
+                <button type="reset" name="reset" value="Oops" id="red">
+                Oops</button>
+            </p></td>
+        </tr>
+    </table>
+    <div class="fix"></div>
+</body>
+
+</html>

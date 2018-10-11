@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>HW2 - 1 HTML</title>
+    <style type="text/css">
+    table{
+        font-family: Arial;
+        text-align: center;
+        color:navy;
+        width:70%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:10px;
+        margin-bottom:10px;
+        border:3px solid black;
+    }
+    caption{
+        font-size:xx-large;
+        color:navy;
+    }
+    tr{
+        border:2px solid black;
+    }
+    td{
+        border:2px solid black;
+    }
+    td#a{
+       font-style:italic;
+       font-weight:bold;
+       text-align:center;
+    }
+    td.b{
+        background-color: yellow;
+        font-style:bold;
+    }
+    td.silver{
+        background-color:silver;
+    }
+    td.lime{
+        background-color:lime;
+    }
+    td#img{
+        background-color:silver;
+        text-align:center;
+        overflow:auto;
+        clear:both;
+        padding:3mm 3mm 4mm 3mm;
+        margin:0%;
+        width:300px;
+    }
+    </style>
+</head>
+
+<body>
+    <table><caption>Exclusive Gifts for All Occasions</caption>
+        <tr ><td id="a" colspan="4">This is an exlusive vase from the Ming Dynasty.
+            <br>
+            It is available in two sizes, with and without gold plating.</td>
+        </tr>
+        <tr><td class="b">Picture</td><td class="b">Size</td><td class="b">Plating</td><td class="b">Price</td></tr>
+        <tr><td rowspan="4" id="img"><img src="images/ming.jpg" width="300"></td><td class="silver" rowspan="2">Small</td><td class="silver">Without Plating</td><td class="silver">$ 65.00</td></tr>
+            <tr><td class="lime">With Gold Plating</td><td class="lime">$ 165.00</td></tr>
+        <tr><td class="silver" rowspan="2">Large</td><td class="silver">Without Plating</td><td class="silver">$ 265.00</td></tr>
+        <tr><td class="lime">With Gold Plating</td><td class="lime">$ 565.00</td></tr></tr>
+        <tr></tr>
+    </table>
+</body>
+
+</html>
