@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Xin Kang</title>
+
+        <script type="text/javascript">
+            function calculate(){
+                let x = document.getElementById("varX").innerHTML;
+                // alert("current value of x:" + x);
+                let y = document.getElementById("varY").innerHTML;
+                // alert(y);
+                let result = x * y;
+                // alert("The result is" + result);
+                document.getElementById("result").innerHTML = result;
+                document.getElementById("last").innerHTML = x % 10;
+            }
+
+          
+
+        </script>
+    </head>
+
+    <body>
+        <h1></h1>
+        <p>x = <span id="varX">2018</span></p>
+        <p>y = <span id="varY">2019</span></p>
+        <p>The result of calculation is <span id="result"></span>.</p>
+        <p>The last digit of x is <span id="last"></span>.</p>
+        <button onclick="calculate()">Click me!</button>
+    </body>
+
+</html>
