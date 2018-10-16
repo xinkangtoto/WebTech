@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Xin Kang</title>
+        <script type="text/javascript">
+           function ask()
+           {
+               //let message = prompt("What day is it today?");
+               //document.getElementById("userInput").innerHTML = message;
+               //let name = prompt("What is your name?");
+               //document.getElementById("name").innerHTML = name;
+               //if ((message == "Tuesday") || (name == "Toto")){
+               //document.getElementById("result").innerHTML = "Correct!";
+               
+               //alert("How are you today?");
+              
+               let x = prompt("What is your gender?");
+               document.getElementById("userInput").innerHTML = x;
+
+               if ((x.toLowerCase() == "male") || (x.toLowerCase() == "man")){
+                document.getElementById("result").innerHTML = "Hello, sir! How old are you?";
+                document.getElementById("image1").src="images/tiger1.jpg";
+               }
+               else if((x.toLowerCase() == "female") || (x.toLowerCase() == "woman")){
+                document.getElementById("result").innerHTML = "Hello, madam!";
+                document.getElementById("image1").src="images/class.jpg";
+               }
+               else{
+                document.getElementById("result").innerHTML = "Hello, robot!";
+               }
+            }
+            function clean(){
+                document.getElementById("userInput").innerHTML = "";
+                document.getElementById("result").innerHTML = "";
+                document.getElementById("image1").src = "";
+            }
+        </script>
+    
+    </head>
+
+    <body>
+        <h1>Conditional Statements Demo</h1>
+
+        <button onclick="ask()">Click Me</button>
+        <button onclick="clean()">Clean</button>
+        <p>
+            input: <span id="userInput"></span>
+        </p>
+        <p>
+                name: <span id="name"></span>
+            </p> 
+            <p>
+                gender: <span id="gender"></span>
+            </p> 
+        <p>
+            Result: <span id="result"></span>
+            <br> <img id="image1" src="">
+        </p>
+
+    </body>
+
+</html>

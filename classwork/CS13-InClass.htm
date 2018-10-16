@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS13-InClass</title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+            }
+
+            p {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            img {
+                border: 15px ridge yellow;
+                width: 50%;
+            }
+        </style>
+
+
+        <script type="text/javascript">
+            function ask(){
+                let x = prompt("What is the name of the leaf?");
+                //document.getElementById("leaf").src="";
+            if (x.toLowerCase() == "thyme"){
+                document.getElementById("leaf").src="images/thyme.jpg";
+            }
+            else if (x.toLowerCase() == "maple"){
+                document.getElementById("leaf").src="images/maple.jpg";
+            }
+            else if (x.toLowerCase() == "clover"){
+                document.getElementById("leaf").src="images/clover.jpg";
+            }
+            else if (x.toLowerCase() == "shamrock"){
+                document.getElementById("leaf").src="images/shamrock.jpg";
+            }
+            else {
+                alert("The input is incorrect!");
+            }
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1> Changing Images Using User inputs - Click on Image below to start</h1>
+        <p>
+        <img id="leaf" src="" alt="Click here to see the image of your choice" title="" onclick="ask()"/>
+    </p>
+        
+    </body>
+
+</html>
