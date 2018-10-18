@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS14 - Quiz</title>
+
+        <style type="text/css">
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-family: Arial;
+            }
+
+            div.main {
+                width: 60%;
+                font-family: Arial;
+                font-size: large;
+                margin: 30px auto;
+            }
+
+
+            .circle {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 50px;
+            }
+
+
+            #blue-circle {
+                background-color: blue;
+            }
+
+            #green-circle {
+                background-color: green;
+            }
+
+            #red-circle {
+                background-color: red;
+            }
+        </style>
+        <script type="text/javascript">
+         function change(x){
+             let i = document.getElementById(x);
+             x = document.getElementById("green-circle");
+             document.getElementById("header2").innerHTML = "You just clicked green circle";
+             document.getElementById("green-circle").style.color = "";
+             x = document.getElementById("blue-circle");
+             document.getElementById("header2").innerHTML = "You just clicked blue circle";
+             document.getElementById("blue-circle").style.color = "";
+             x = document.getElementById("red-circle");
+             document.getElementById("header2").innerHTML = "You just clicked red circle";
+             
+             
+         }
+        
+        </script>
+        
+    </head>
+
+    <body>
+        <h1> CS14 - Quiz</h1>
+        <div class="main">
+            <p>Please create the functionality to do the following: (a)
+                When you click any circle, h2 must change to "You just clicked (blue/green/red circle)". (b) When you
+                click the first or the second circle,
+                the color of this circle must change to a darker color, the other must change to a lighter color;
+                (c) When you click the red circle, the red circle
+                must disappear and the other two circles must change to the original colors; when you click the first
+                two circles, the red circle must re-appear.</p>
+        </div>
+
+        <hr />
+        <h2 id="header2">Play with circles</h2>
+        <div class="main">
+
+            <div class="circle" id="green-circle" onclick="change(this.id)"></div>
+
+            <div class="circle" id="blue-circle" onclick="change(this.id)"></div>
+
+            <div class="circle" id="red-circle" onclick="change(this.id)"></div>
+
+        </div>
+
+    </body>
+
+</html>
