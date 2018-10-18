@@ -44,20 +44,28 @@
             }
         </style>
         <script type="text/javascript">
-         function change(x){
-             let i = document.getElementById(x);
-             x = document.getElementById("green-circle");
-             document.getElementById("header2").innerHTML = "You just clicked green circle";
-             document.getElementById("green-circle").style.color = "";
-             x = document.getElementById("blue-circle");
-             document.getElementById("header2").innerHTML = "You just clicked blue circle";
-             document.getElementById("blue-circle").style.color = "";
-             x = document.getElementById("red-circle");
-             document.getElementById("header2").innerHTML = "You just clicked red circle";
-             
-             
-         }
-        
+         function change(circle){
+             if ((circle == "green-circle")){
+                 document.getElementById("header2").innerHTML = "You just clicked green circle";
+                 document.getElementById("green-circle").style.backgroundColor = "DarkGreen";
+                 document.getElementById("blue-circle").style.backgroundColor = "LightBlue";
+                 document.getElementById("red-circle").style.display = "block";
+             }
+             else if ((circle == "blue-circle")){
+                 document.getElementById("header2").innerHTML = "You just clicked blue circle";
+                 document.getElementById("green-circle").style.backgroundColor = "LightGreen";
+                 document.getElementById("blue-circle").style.backgroundColor = "DarkBlue";
+                 document.getElementById("red-circle").style.display = "block";
+             }
+             else if ((circle == "red-circle")){
+                 document.getElementById("header2").innerHTML = "You just clicked red circle";
+                 document.getElementById("green-circle").style.backgroundColor = "Green";
+                 document.getElementById("blue-circle").style.backgroundColor = "Blue";
+                 document.getElementById("red-circle").style.display = "none";
+                 document.getElementById("red-circle").style.display = "red";
+             }
+
+             }        
         </script>
         
     </head>
