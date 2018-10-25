@@ -30,19 +30,19 @@
             let myForm = document.getElementById("form");
             let cel = myForm.cel.value;
             let far = myForm.far.value;
-            if ((cel.length == 0) && (far.length == 0)){
+            if ((cel == "") && (far == "")){
                 alert("Please at least enter a value.");
             }
             else if ((isNaN(cel)) || (isNaN(far))){
                 alert("Please enter a numerical value.")
             }
-            else if ((cel.length > 0) && (isNaN(cel))){
+            else if ((isNaN(cel) == false) && (far == "")){
                 let message = cel*1.8 + 32;
-                far = parseFloat(message)
+                myForm.far.value = parseFloat(message)
             }
-            else {
+            else if ((isNaN(far) == false) && (cel == "")){
                 let message = (far - 32)/1.8;
-                cel = parseFloat(message);
+                myForm.cel.value = parseFloat(message);
             }
             return false;
         }
