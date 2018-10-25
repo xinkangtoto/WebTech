@@ -37,12 +37,12 @@
                 alert("Please enter a numerical value.")
             }
             else if ((isNaN(cel) == false) && (far == "")){
-                let message = cel*1.8 + 32;
-                myForm.far.value = parseFloat(message)
+                let far = cel*1.8 + 32;
+                myForm.far.value = parseFloat(far);
             }
             else if ((isNaN(far) == false) && (cel == "")){
-                let message = (far - 32)/1.8;
-                myForm.cel.value = parseFloat(message);
+                let cel = (far - 32)/1.8;
+                myForm.cel.value = parseFloat(cel);
             }
             return false;
         }
