@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>CS15-InClass2 - Temperature Converter</title>
+        <style type="text/css">
+            form {
+                font-family: Arial;
+                font-weight: bold;
+                padding: 60px;
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: Silver;
+            }
+
+            h1 {
+                font-family: Arial;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            div#d1 {
+                margin-bottom: 40px;
+            }
+        </style>
+        <script type="text/javascript">
+        function convert(){
+            let myForm = document.getElementById("form");
+            let cel = myForm.cel.value;
+            let far = myForm.far.value;
+            if ((cel.length == 0) && (far.length == 0)){
+                alert("Please at least enter a value.");
+            }
+            else if ((isNaN(cel)) || (isNaN(far))){
+                alert("Please enter a numerical value.")
+            }
+            else if ((cel.length > 0) && (isNaN(cel))){
+                let message = cel*1.8 + 32;
+                far = parseFloat(message)
+            }
+            else {
+                let message = (far - 32)/1.8;
+                cel = parseFloat(message);
+            }
+            return false;
+        }
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1> Celsius Fahrenheit Converter</h1>
+        <form action="" method="post" id="form">
+            <div id="d1">
+                Celsius: <input type="text" name="cel" size="10" /> Fahrenheit: <input type="text" name="far" size="10" />
+            </div>
+
+            <div style="margin-left:100px">
+                <input onclick="return convert()" type="submit" name="submit" value="Convert" style="width:80px; height:40px;" />
+                <input type="reset" name="reset" value="Clear" style="width:80px; height:40px;" />
+            </div>
+        </form>
+
+
+    </body>
+
+</html>
