@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Xin Kang</title>
+        <script type="text/javascript">
+        function choose(){
+            let Toto = document.getElementById("form1");
+            let userChoice = "nothing yet";
+            //if (Toto.colors[0].checked){
+            //    userChoice = Toto.colors[0].value;
+            //}
+            //else if (Toto.colors[1].checked){
+            //    userChoice = Toto.colors[1].value;
+            //}
+            //else if (Toto.colors[2].checked){
+            //   userChoice = Toto.colors[2].value;
+            //}
+            //else if (Toto.colors[3].checked){
+            //    userChoice = Toto.colors[3].value;
+            //}
+            //else {
+            //    userChoice = "nothing yet";
+            //}
+            
+        for (let i = 0; i < Toto.colors.length; i = i + 1){
+            if (Toto.colors[i].checked){
+                userChoice = Toto.colors[i].value;
+            } 
+        }
+        document.getElementById("choice").innerHTML = userChoice;
+
+        let x = "";
+        const tweets = ["Hi, everyone!", "I love Web Tech.", "I am working on my project.", "Have a nice day!"]
+
+        for (let i = 0; i<tweets.length; i++){
+            x = x + "<li>" + tweets[i] + "</li>";
+        }
+        document.getElementById("tweets").innerHTML = x;
+            
+        return false;
+        }
+        </script>
+    
+    </head>
+
+    <body>
+        <h1>Array Demo</h1>
+
+        <form id="form1" action="" method="post">
+            Red: <input type="radio" name="colors" value="red">
+            Blue: <input type="radio" name="colors" value="blue">
+            Yellow: <input type="radio" name="colors" value="yellow">
+            Green: <input type="radio" name="colors" value="green">
+            <button onclick="return choose()">Click me!</button>
+            <input type="reset" value="Clear"></button>
+        </form>
+        <p>You have chosen <span id="choice"></span>.</p>
+        <ol id="tweets"></ol>
+    </body>
+
+</html>

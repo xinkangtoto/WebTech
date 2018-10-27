@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CS16-InClass1</title>
+        <style type="text/css">
+            form {
+                background-color: Silver;
+                font-family: Arial;
+                color: Navy;
+                padding: 30px 50px 30px 100px;
+                margin-right: 150px;
+                margin-left: 150px;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: Cursive;
+                color: Black;
+            }
+        </style>
+        <script type="text/javascript">
+        function go(){
+            let Toto = document.getElementById("form");
+            let userChoice;
+            for (let i = 0; i < Toto.colors.length; i++) {
+                if (Toto.colors[i].checked){
+                    userChoice = Toto.colors[i].value;
+                }
+            }
+            Toto.style.backgroundColor = userChoice;
+
+            //let checkbox = Toto.mags.value;
+            //let checkboxChecked = "";
+            //for (let i = 0; i < Toto.checkbox.length; i++){
+            //    if (Toto.checkbox[i].checked){
+            //        checkboxChecked.push(Toto.checkbox[i]);
+            //    }
+            //}
+            //Toto.result.innerHTML = checkboxChecked;
+
+            return false;
+        }
+        </script>
+    </head>
+
+    <body>
+        <form id="form" action="" method="post">
+            <h2>Processing Radio Button and Check Box</h2>
+            <p>
+                Please select a background color for the page:
+            </p>
+            <p>
+                Green: <input type="radio" name="colors" value="green" /> Yellow: <input type="radio" name="colors"
+                    value="yellow" /> Lime: <input type="radio" name="colors" value="lime" /> Aqua: <input type="radio"
+                    name="colors" value="aqua" />
+            </p>
+            <p>
+                Please select your favorite magazines: <br />
+                <input type="checkbox" name="mags" value="Sports Illustrated" />Sports Illustrated<br />
+                <input type="checkbox" name="mags" value="Wired" />Wired <br />
+                <input type="checkbox" name="mags" value="National Geographic" />National Geographic<br />
+                <input type="checkbox" name="mags" value="WSJ" />WSJ
+            </p>
+            <p>
+                <textarea id="textarea" name="result" cols="40" rows="4"></textarea>
+            </p>
+            <p>
+                <input onclick="return go()" type="submit" name="submit" value="Go!" />
+                <input type="reset" name="Reset" value="Clear!" />
+            </p>
+
+        </form>
+
+
+    </body>
+
+</html>
