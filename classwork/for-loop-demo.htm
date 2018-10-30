@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - For Loops</title>
+
+        <script type="text/javascript">
+        function cal(){
+            let result = 0;
+            //solution 1
+            // for (let i = 0; i <= 10; i = i + 2){
+            //      result += i;
+            // }
+            // for (let i = i; i <= 10; i = i + 2){
+            //      result += i; (caculate the sum of all the odd numbers)
+            // }
+            //solution 2
+            // for (let i = 0; i < 6; i++){
+            //     result += i * 2;
+            //     alert("after adding" + i * 2 + "result becomes" + result);
+            // }
+            for (let i = 0; i <= 10; i++){
+            if (i%2 == 0){ //(i/2, the remainder is 0 --> i is an even number)
+            result += i;
+            }
+            }
+            // for (let i = 0; i <= 10; i++){
+            // if (i%2 == 1){ //(i/2, the remainder is 1 --> i is an odd number)
+            // result += i;
+            // }
+            // }
+            document.getElementById("result").innerHTML = result;
+            
+            //i=0 initialization; i<colors.length stopping point; array = length - 1;
+            //1. show integers from 0 to n
+            //for (let i=0; i<=n; i++){
+            // alert(i);
+            //}
+            //2. show sum of all integers from 0 to 10
+            //let sum = 0;
+            //for (let i=0; i<=10; i++){
+            // sum = sum + i;
+            //}
+            //3. show sum of all the even numbers from 0 to 10;
+            //let result = 0;
+            //for (let i=0; i<=10; i = i+2){
+            //result + = i;
+            //}
+            //OR let result = 0;
+            //for (let i=0; i<6; i++){
+            //result = result + i * 2;
+            //}
+            //OR let result = 0;
+            //for (let i=0; i<=10; i++){
+            //if (i%2 == 0){ (i/2, the remainder is 0 --> i is an even number)
+            //result += i;
+            //}
+            //}
+        }
+        </script>
+    
+    </head>
+
+    <body>
+        <h1>Calculating sum of even numbers from 0 to 10</h1>
+    <button onclick="cal()">Calculate</button>
+    <p id="result"></p>
+    </body>
+
+</html>
