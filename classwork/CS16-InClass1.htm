@@ -30,15 +30,13 @@
             }
             Toto.style.backgroundColor = userChoice;
 
-            //let checkbox = Toto.mags.value;
-            //let checkboxChecked = "";
-            //for (let i = 0; i < Toto.checkbox.length; i++){
-            //    if (Toto.checkbox[i].checked){
-            //        checkboxChecked.push(Toto.checkbox[i]);
-            //    }
-            //}
-            //Toto.result.innerHTML = checkboxChecked;
-
+            let magazines = "";
+            for (let i = 0; i < Toto.mags.length; i++){
+                if (Toto.mags[i].checked){
+                    magazines = megazines + Toto.mags[i].value + "\n";
+                }
+            }
+            Toto.result.value = magazines;
             return false;
         }
         </script>
