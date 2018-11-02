@@ -4,14 +4,25 @@
     <head>
         <title>CS16-InClass2 - Windows and Drop down lists</title>
         <script type="text/javascript">
-
+        function openWindow(){
+            let Toto = document.getElementById("form");
+            if (Toto.animal.value == "null"){
+                alert("Select a value from the following list.")
+            }
+            else if (Toto.animal.value == "wolf"){
+                window.open('http://en.wikipedia.org/wiki/Gray_wolf', 'mywin', 'width = 600, height = 500')
+            }
+            else {
+                window.open('https://en.wikipedia.org/wiki/Lynx', 'mywin', 'width = 400, height = 400, top = 200, left = 600');
+            }
+        }
         </script>
     </head>
 
     <body>
         <h1> Illustrating Open Windows</h1>
-        <form method="post">
-            <select name="animal">
+        <form id="form" method="post">
+            <select onchange="openWindow()" name="animal">
                 <option value="null">Please select a value</option>
                 <option value="wolf">Wolf</option>
                 <option value="lynx">Lynx</option>
