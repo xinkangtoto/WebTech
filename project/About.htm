@@ -4,6 +4,104 @@
 <head>
         <meta charset="UTF-8">
         <title>About Us</title>
+<style type="text/css">
+body{
+        background-color: darkred;
+        margin:50px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkgoldenrod;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color:goldenrod;
+}
+
+h1{
+   color:honeydew;
+   margin-top:80px;
+   position:relative;
+   text-align: left;
+}
+h2{
+        color:honeydew;
+   margin-top:80px;
+   position:relative;
+   text-align: left;
+}
+h4{
+   color:honeydew;
+   margin-top:80px;
+   position:relative;
+   text-align: left;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+img {
+    margin-left:auto;
+    margin-right:auto;
+    width: 300%;
+    height: 300px;
+    display:block;
+}
+.container .button{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:indianred;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container .button:hover {
+    background-color: black;
+    color:black;}
+
+a#btn:link, a:visited {
+    color:white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a#btn:hover, a:active {
+    background-color:black;
+}
+        </style>
         
 </head>
 
@@ -21,15 +119,19 @@
    <h1>About Us</h1>
    <hr>
    <h2>LookinChengdu's Site Map</h2>
-   <p><button type="direct" name="sitemap" value="sitemap"><a href="Sitemap.htm" target="_blank">Site Map</a></button></p>
+   <div class="container">
+        <img src="https://wikitravel.org/upload/shared//2/20/Chengdu_Banner.jpg" alt="sitemap" title="sitemap" style="width:300">
+        <button class="button" type="direct" name="sitemap" value="sitemap"><a id="btn" href="Sitemap.htm" target="_blank">Site Map</a></button>
+   </div>
    <h2>Who Are We?</h2>
    <h4>We are a group of Chengdu Insiders who knows Chengdu well and want to <br>
        let more people get to understand different sides of Chengdu.</h4>
    <hr>
    <h2>Want to Hear More from Us?</h2>
    <form method=POST action="mailto:toto@lookinchengdu.com">
-        <p><button type="subcribe" name="subscribe" value="subscribe">
-                Subscribe</button></p>
+        <br>
+        <div class="container"><button class="button" type="subcribe" name="subscribe" value="subscribe">
+                Subscribe</button></div>
    </form>
 </body>
 
