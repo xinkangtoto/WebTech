@@ -1,0 +1,73 @@
+<html>
+
+    <head>
+
+        <title>jQuery</title>
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <style type="text/css">
+            #circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+
+            #square {
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                margin: 10px;
+                text-align: center;
+            }
+        </style>
+
+
+
+    </head>
+
+    <body>
+
+        <div id="circle"></div>
+
+        <div id="square"></div>
+        <div class="ui-widget">
+            <label for="tags">Tags: </label>
+            <input id="tags">
+        </div>
+
+        <script type="text/javascript">
+
+            // $("#circle").click(function () {
+            //     $("#circle").css("background-color", "blue");
+            //     $("#square").text("It's not me!");
+            // });
+
+            $("#square").dblclick(function () {
+                $("#circle").css("background-color", "green");
+                $(this).text("");
+                // alert("a square was clicked!");
+            });
+
+            $("#circle").draggable();
+
+            var availableTags = [
+                "Rahul",
+                "Alvie",
+
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        </script>
+
+    </body>
+
+</html>
