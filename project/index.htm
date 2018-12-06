@@ -7,6 +7,8 @@
         <style type="text/css">
                 body{
                         background-color: rosybrown;
+                        margin-left:25px;
+                        margin-right:50px;
                 }
                 ul {
                     list-style-type: none;
@@ -51,7 +53,52 @@
                         height: auto;
                         -webkit-filter: drop-shadow(8px 8px 10px green);filter: drop-shadow(8px 8px 10px rgb(69, 41, 148));
                 }
+                #click{
+                        text-align: center;
+                        font-family: 'Lucida Sans';
+                        color:aliceblue;
+                        font-size: 10px;
+                }
+                #button{
+                        text-align: right;
+                }
                         </style>
+                        <script type="text/javascript">
+                                function enlarge(x){
+                                    let i = document.getElementById(x);
+                                    let w = i.width;
+                                    // alert(w);
+                                    i.width = w * (1 + 0.5);
+                                    // alert("w: "+ w + ". The current width" + i.width);
+                                    i.style.border = "white 5px solid";
+                                };
+                                function shrink(x){
+                                    let i = document.getElementById(x);
+                                    let s = i.width;
+                                    i.width = s / (1 + 0.5);
+                                    i.style.border = "None";
+                                };
+                    
+                                function check(){
+                                    let i = document.getElementById(x);
+                                    let w = i.width;
+                                    alert(w);
+                                };
+
+                                function change(){
+                                       document.getElementById("text").innerHTML = "Come and Explore Chengdu!";
+                                       document.getElementById("text").style.color = "darkred";
+                                       document.getElementById("text").style.fontSize = "100px";
+                                }
+                                function hide(){
+                                const h = document.getElementById('music');
+                                h.style.visibility = 'hidden';
+                                }
+                                function show(){
+                                const s = document.getElementById('music');
+                                s.style.visibility = 'visible';
+                                }
+                            </script>
 </head>
 
 <body>
@@ -67,11 +114,20 @@
         </ul>        
    <h1>LookinChengdu</h1>
    <h3>See, know and feel Chengdu in every way.</h3>
-   <h3>Chengdu - a wonderland that you can't miss.</h3>
-   <img src="images/chengdu-pixabay.jpg" alt="Chengdu" title="lookinchengdu">
+   <h3 id="text">Chengdu - a wonderland that you can't miss.</h3>
+   <img src="images/chengdu-pixabay.jpg" alt="Chengdu" title="lookinchengdu" width="1000" height="800" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" id="chengdu">
+<div id="music">
    <audio controls>
                 <source src="music/Zhao Lei - Chengdu _ChinENG Subtitles_.mp3" type="audio/mp3">
               </audio>
+</div>
+<div>
+<p id="click"><img src="images/Panda_Hugs.png" width="50" height="80" alt="click" title="click" onclick="change()">Click Me if You Dare.</p>
+</div>
+<div id="button">
+<button onclick="hide()">Hide Music</button>
+<button onclick="show()">Show Music</button>
+</div>
 </body>
 
 </html>

@@ -7,6 +7,8 @@
         <style type="text/css">
                 body{
                         background-color: darkred;
+                        margin-left:25px;
+                        margin-right:50px;
                 }
                 ul {
                     list-style-type: none;
@@ -37,12 +39,12 @@
                     background-color:goldenrod;
                 }
                 h1.title{
-                        margin-top:50px;
                         font-family:Georgia;
                         color:white;
                         margin-top:80px;
                         position:relative;
                         text-align: center;
+                        margin-bottom:50px;
                 }
                 h3{
                         color:lavenderblush;
@@ -58,10 +60,157 @@
                 p#video{
                         text-align: center;
                 }
-                </style>       
+                * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  max-height: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #b33030;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+                </style>
+                        <script type="text/javascript">
+                                // var counter = 0;
+                                var p = 305; k = 0;
+                                var messageList = new Array ("How", "Locals", "Live",
+                        "Their", "Life", "in", "Chengdu", "?");
+                                function doScroll(){
+                                    let x = document.getElementById("msg");
+                                    x.innerHTML = messageList[k];
+                                    x.style.left = p + "px";
+                                    document.getElementById("msg").style.left = p + "px";
+                                    if (p > 700){
+                                        p = 450;
+                                        k++;
+                                        if (k == messageList.length){
+                                            k = 0;
+                                        }
+                                        x.style.left = p + "px"; //(the end of the movement)
+                                    }
+                                    else {
+                                        p = p + 1;
+                                    }
+                                    setTimeout("doScroll()", 10);
+                                }
+                                let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+                                </script>       
 </head>
 
-<body>
+<body onload="doScroll()">
 <ul>                
            <li><a href="index.htm" target="_blank">Home</a></li>
            <li><a href="About.htm" target="_blank">About Us</a></li>
@@ -72,22 +221,64 @@
            <li><a href="Contact.htm" target="_blank">Contact</a></li>
            <li><a href="Sitemap.htm" target="_blank">Site Map</a></li>
         </ul>
-<h1 class="title">How Locals Live Their Life in Chengdu?</h1>
-<h3>Local Lifestyle of Chengdu - The Most Laid-back Lifestyle</h3>
-<p>
-        Chengdu is known as China's happiest city, and therefore has its happiest people. It is believed that part of the reason for this is the leisurely and slow-paced lifestyle that many of them live. It is ingrained in the very fiber of Chengdu culture.<br>
-                
-        Chengdu is famous for many reasons, first, is its local cuisine. Chengdu cuisine is one of China's four most famous food styles. Known as Chuan style food, it is well-known for its delicious spiciness. It is not spicy, just to be spicy, but each dish is unique and flavorful. One of Chengdu's resident's favorite ways to eat dinner, is to do so while taking a walk. A couple or an entire family will walk through the streets of Chengdu in the evening. Along Chengdu's streets can be found many small stands selling local favorites. The majority of these small stands sell dishes that can be conveniently carried, so people walking along the streets will stop at one stand pick out something, and continue on their walk and then stop at another. It is a wonderful way to spend the evening. <br>
-                
-        Another inseparable part of Chengdu people's daily life is the tea house. Chengdu is the last bastion of traditional Chinese teahouses. Scattered throughout the city, the teahouses are much more than just a place to drink tea. They are a meeting center, a place to conduct business, meet with old friends, or make new ones. Many people love to go to a teahouse in the morning and spend the day there. Besides tea, most teahouses offer food, and snacks to clients. Traveling businessmen offer services such as massages, ear cleaning, and fingernail cutting. Many teahouses offer some performances such as storytelling, local opera, or live music. When most people decide it is time to leave, they will gather what snacks they have left, and give them to the people sitting at the table next to theirs. Chengdu locals love playing Mahjong, and after work the sounds of Mahjong tiles can be heard clicking all around the city. When someone is not present, local people jokingly say that that person is either playing Mahjong, or on their way to play Mahjong. It is an ancient game that is easy to learn, but takes a lifetime to master. It is extremely addicting, and most locals will play the game all night, and sometimes well into the next day.
-                
-        <br>Chengdu Opera, one of the five most famous operas in China is extremely popular with locals. Chengdu Opera is unique from most local operas in China because the performance offers more than just singing, and martial arts. It also features acrobatics, fire-breathing, and the magic of face changing. Face changing is an art in which a performer comes onto stage wearing a silk mask with an opera characters face on it. The actor struts around stage, and with a flick of his head, the mask is instantly changed for another. It is done with such speed, that it is impossible to tell how it is done, making it seem like a magic show in the middle of the opera. Watching face-changing is one of the necessary things to do in Chengdu.
-                
-        <br>Chengdu is also home to many festivals that are uniquely its own. Each year Chengdu puts on a ballad festival at Wangcong Temple where people from around the country come to sing for onlookers. Chengdu's famous flower festival is held every February and is a harbinger of spring. People from throughout China and around the world head to Chengdu each spring to see its famous flower festival. One thing that all Chengdu residents' love is peach blossoms and peach trees can be found throughout the city. Every spring when the peach blossoms are in bloom, the city holds a huge peach blossom festival and the entire city explodes with color.
-                
-        <br>Chengdu has much more to see than just its famous sites. To spend a little time with the locals in a teahouse, or at an opera will give visitors a glimpse into the lifestyle that residents treasure. It is a unique experience that cannot be found anywhere else in the world. </p>
 
-<hr>
+        <div>       
+<h1 id="msg" class="title">How Locals Live Their Life in Chengdu?</h1></div>
+
+<div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 6</div>
+                  <img src="images/life17.jpeg" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 6</div>
+                  <img src="images/life2.jpg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="images/life9.jpeg" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+
+                <div class="mySlides fade">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="images/life14.jpeg" style="width:100%">
+                                <div class="text">Caption Four</div>
+                              </div>
+
+                <div class="mySlides fade">
+                                        <div class="numbertext">5 / 6</div>
+                                        <img src="images/life16.jpeg" style="width:100%">
+                                        <div class="text">Caption Five</div>
+                </div>
+
+                <div class="mySlides fade">
+                                <div class="numbertext">6 / 6</div>
+                                <img src="images/life18.jpeg" style="width:100%">
+                                <div class="text">Caption Six</div>
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+              </div>
+
 <h1 class="title">Another Perspective...</h1>
 <p id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/RBiUtnQAiBQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 </body>
