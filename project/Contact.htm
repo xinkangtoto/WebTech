@@ -3,6 +3,8 @@
 
 <head>
         <meta charset="UTF-8">
+        <meta name="keywords" content="Chengdu,travelling,explore,food,attractions,culture,lifestyle,discover,China,Sichuan,travelling tips,Chengdu,play,experience">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact</title>
         <style type="text/css">
                 body{
@@ -42,7 +44,7 @@
                         margin-top:80px;
                         position:relative;
                         font-family:Georgia;
-                        color:saddlebrown;
+                        color:bisque;
                         margin-top:80px;
                         position:relative;
                         text-align: center;
@@ -66,10 +68,32 @@
                 h4{
                         font-family:Georgia;
                         color:white;
-                        margin-top:80px;
+                        margin-top:5px;
                         position:relative;
                         text-align: center;
                 }
+                #form{
+                    font-family: Georgia;
+                    font-size:15px;
+                    color:white;
+                    text-align: center;
+                }
+                .form2{
+                    font-family: Georgia;
+                    font-size:15px;
+                    color:white;
+                    text-align: center;
+                }
+                #panel, #flip {
+                    padding: 5px;
+                    text-align: center;
+                    background-color:#fd6363;
+                    border: solid 1px lightpink;
+                    }
+                #panel {
+                    padding: 20px;
+                    display: none;
+                    }
                 </style>
                 <script type="text/javascript">
                         function enter(){
@@ -96,7 +120,16 @@
                         }
                         return false;
                         }
-                        </script>        
+                        </script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+                        </script>
+                        <script> 
+                            $(document).ready(function(){
+                                $("#flip").click(function(){
+                                    $("#panel").slideDown("slow");
+                                });
+                            });
+                            </script>        
 </head>
 
 <body>
@@ -106,7 +139,6 @@
            <li><a href="Food.htm" target="_blank">Food Corner</a></li>
            <li><a href="Culture & Life Style.htm" target="_blank">Culture and Life in Chengdu</a></li>
            <li><a href="Attractions.htm" target="_blank">The Best Places to Explore in Chengdu</a></li>
-           <li><a href="Travelling Tips.htm" target="_blank">Tips!</a></li>
            <li><a href="Contact.htm" target="_blank">Contact</a></li>
            <li><a href="Sitemap.htm" target="_blank">Site Map</a></li>
         </ul> 
@@ -139,31 +171,31 @@
     
             </form>
    
-   <form method=POST action="mailto:toto@lookinchengdu.com">
-<p><textarea name="feedback" rows="10" cols="150">You Make Us Do Better!</textarea></p>
+   <form method=POST action="mailto:toto@lookinchengdu.com" class="form2">
+<p><textarea name="feedback" rows="10" cols="100">You Make Us Do Better!</textarea></p>
         <p><button type="submit" name="submit" value="submit">
                         Submit</button></p>        
 </form>   
    <hr>
+   <div>
    <h3>Any Problems?</h3>
    <h4>We are here to help.</h4>
-   <form method=POST action="mailto:toto@lookinchengdu.com">
-           <textarea name="issues" rows="10" cols="150">e.g."I can't see the map."</textarea>
+   <form method=POST action="mailto:toto@lookinchengdu.com" class="form2">
+           <textarea name="issues" rows="10" cols="100">e.g."I can't see the map."</textarea>
            <p>Limit to 500 characters</p>
            <p><button type="submit" name="submit" value="submit">
                         Submit</button></p>
    </form>
 </div>
    <hr>
-   <div>
-   <h3>No thanks, just show me the phone number.</h3>
-   <h4>U.S. & Canada<br>
+   <div id="flip"><h3>No thanks, just show me the phone number.</h3></div>
+   <div id="panel">
+       <h4>U.S. & Canada<br>
         XXX-XXX-XXXX
    </h4>
    <h4>International line<br>
         XXX-XXX-XXXX
-   </h4>
-</div>
+   </h4></div>
    <hr>
 
 </body>
