@@ -34,37 +34,40 @@
         </style>
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript">
-        $(document).ready(function (){
-            $("#btn-odd").click(function (){
-                $("tr:odd").hide();
-                $("tr:even").show();
-                $("#three").animate({ top: "45px"}, 5000)
-            });
+            $(document).ready(function () {
+                $("#btn-odd").click(function () {
+                    $("tr:odd").hide();
+                    $("tr:even").show();
+                    $("#three").animate({ top: "45px" }, 5000);
+                });
 
-            $("#btn-even").click(function (){
-                $("tr:even").hide();
-                $("tr:odd").show();
-                $("#three").animate({ top: "400px"}, 5000);
-            });
+                $("#btn-even").click(function () {
+                    $("tr:even").hide();
+                    $("tr:odd").show();
+                    $("#three").animate({ top: "400px" }, 5000);
+                });
 
-            $("p").click(function (){
-                $("h1, p, tr").addClass("blue");
-                $("h2").addClass("red");
-            });
+                $("p").click(function () {
+                    $("h1, p, tr").addClass("blue");
+                    $("h2").addClass("red");
+                });
 
-            $("h1").click(function (){
-                // $("h1, p, tr").addClass("blue");
-                // $("h2").addClass("red");
-                $("*").removeClass();
+                $("h1").click(function () {
+                    // $("h1, p, tr").removeClass("blue");
+                    // $("h2").removeClass("red");
+
+                    $("*").removeClass();
+                })
+
+
             })
-        })
         </script>
 
     </head>
 
     <body>
         <!-- Your HTML goes here -->
-        <h1> This is a simple<span id="a"></span>text</h1>
+        <h1> This is a simple text</h1>
         <h2> This is another simple text</h2>
         <p> It's hard to tell what goes through a baby elephant's mind when its mom is trying to put it to sleep. Do
             you think
@@ -73,7 +76,6 @@
             them to rock them back to sleep? How do you rock an elephant, anyway? And what about gorillas?
         </p>
         <table>
-
             <tr>
                 <td>Tom Brady</td>
                 <td>1 Patriot Place</td>
@@ -103,8 +105,8 @@
                 <td>00007</td>
             </tr>
         </table>
-        <button id="btn-odd">Show Odd Rows</button>
-        <button id="btn-even">Show Even Rows</button>
+        <button id='btn-odd'>Show Odd Rows</button>
+        <button id='btn-even'>Show Even Rows</button>
 
         <div id="three">
             <h3>This text will move</h3>
